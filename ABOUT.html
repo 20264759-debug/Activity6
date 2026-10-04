@@ -32,11 +32,7 @@
     margin: 0;
   }
 
-  .logo-area {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
+  .logo-area { display: flex; align-items: center; gap: 12px; }
 
   .logo-circle {
     width: 40px;
@@ -51,11 +47,7 @@
     color: #3a3a3a;
   }
 
-  .logo-area h1 {
-    font-size: 18px;
-    letter-spacing: 2px;
-    font-weight: 600;
-  }
+  .logo-area h1 { font-size: 18px; letter-spacing: 2px; font-weight: 600; }
 
   nav ul {
     list-style: none;
@@ -82,34 +74,36 @@
   }
 
   main {
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 80px 40px;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 40px 30px;
+    background: transparent;
     background-color: #f7f4ee;
-    text-align: center;
     border-radius: 4px;
-  }
-
-  main h2 {
-    font-size: 40px;
-    letter-spacing: 3px;
-  }
-
-
-  
-.avatar {
     display: flex;
     justify-content: center;
-    gap: 24px;
-    margin-bottom: 36px;
+  }
+
+  /* The card holds everything */
+  .card {
+    background-color: #8c5e5e;
+    border: 5px solid #5a3a3a;
+    border-radius: 48px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+    max-width: 2000px;
+    min-height: 700px;      
+    width: 100%;
+    padding: 100px 90px;
+    text-align: center;
   }
 
   .avatar {
     width: 200px;
     height: 200px;
+    margin: 0 auto 30px;
     border-radius: 50%;
     background-color: #c9c2b3;
-    border: 2px solid #3a3a3a;
+    border: 3px solid #ffffff;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,10 +114,28 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-  object-position: center;
+    object-position: center;
   }
 
- 
+  .card h2 {
+    font-size: 44px;
+    letter-spacing: 3px;
+    color: #ffffff;
+    margin-bottom: 30px;
+  }
+
+  .about-text {
+    max-width: 650px;
+    margin: 0 auto 24px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 18px;
+    line-height: 1.7;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .about-text:last-child { margin-bottom: 0; }
 
   footer {
     background-color: #3a3a3a;
@@ -137,12 +149,10 @@
   @media (max-width: 700px) {
     header { padding: 16px 16px 0; }
     nav ul { gap: 20px; }
-    main { margin: 20px 12px; padding: 48px 20px; }
-    main h2 { font-size: 28px; }
-  }
-  p{
-    text-align: center;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    main { margin: 20px 12px; padding: 24px 12px; }
+    .card { padding: 40px 24px; border-radius: 28px; }
+    .card h2 { font-size: 28px; }
+    .about-text { font-size: 16px; }
   }
 </style>
 </head>
@@ -166,21 +176,31 @@
   </nav>
 </header>
 
-<div class="avatar">
-
-  <img  src="Profile.jpg" alt="Picture">
-</div>
-
-
 <main>
-  <h2>ABOUT THE COLLECTION</h2>
-</main>
+  <div class="card">
 
-<p>As a Student this brand promotes a good future and better innovation as time goes on Mejia's creatives aims to improve
-  life where you have a good future and good investment for your own future self
-</p>
-<p>A good future where your time is not wasted and used wisely.Where time is the essence and time is gold so must be used properly and wisely</p>
-<p>A innovation that can be used for future use where you can see yourself ten years from now being succesful and content with life</p>
+    <div class="avatar">
+      <img src="Profile.jpg" alt="Profile picture">
+    </div>
+
+    <h2>ABOUT THE COLLECTION</h2>
+
+    <p class="about-text">
+      As a student, this brand promotes a good future and better innovation as time goes on.
+      Mejia's Creatives aims to improve life where you have a good future and a good investment
+      for your own future self.
+    </p>
+    <p class="about-text">
+      A good future where your time is not wasted and is used wisely. Where time is of the
+      essence and time is gold, so it must be used properly and wisely.
+    </p>
+    <p class="about-text">
+      An innovation that can be used in the future, where you can see yourself ten years from now
+      being successful and content with life.
+    </p>
+
+  </div>
+</main>
 
 <footer>
   &copy; 2026 Mejia's Creatives
