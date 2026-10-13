@@ -52,51 +52,90 @@
   }
 
   .logo-area h1 {
-    font-size: 18px;
-    letter-spacing: 2px;
-    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: 3px;
+    font-weight: 700;
   }
 
   nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 36px;
-    padding: 14px 0;
+    gap: 0;
     flex-wrap: wrap;
   }
 
   nav a {
+    display: block;
     color: #ffffff;
     text-decoration: none;
     font-size: 14px;
     letter-spacing: 1px;
-    padding-bottom: 4px;
+    padding: 16px 32px;
+    border-bottom: 3px solid transparent;
   }
 
   nav a:hover { color: #e8d9b5; }
 
+  /* Active page: highlighted tab with underline */
   nav a.active {
     color: #e8d9b5;
-    border-bottom: 1px solid #e8d9b5;
+    background-color: #2a2a2a;
+    border-bottom: 3px solid #e8d9b5;
   }
 
-  main {
-    max-width: 900px;
-    margin: 60px auto;
-    padding: 80px 40px;
-    background-color: #f7f4ee;
+  /* ---------- Portfolio card + grid ---------- */
+  .portfolio-card {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 40px 40px 50px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
     text-align: center;
-    border-radius: 4px;
   }
 
-  main h2 {
-    font-size: 40px;
-    letter-spacing: 3px;
+  .portfolio-card h2 {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .portfolio-card .subtitle {
+    margin: 10px 0 36px;
+    font-size: 14px;
+    color: #6b6b6b;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 28px 24px;
+    justify-items: center;
+  }
+
+  .gallery-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-item img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #3a3a3a;
+  }
+
+  .gallery-item figcaption {
+    margin-top: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
   }
 
   footer {
-    background-color: #3a3a3a;
+    background-color: #000000;
     color: #cfcfcf;
     text-align: center;
     padding: 18px;
@@ -106,9 +145,13 @@
 
   @media (max-width: 700px) {
     header { padding: 16px 16px 0; }
-    nav ul { gap: 20px; }
-    main { margin: 20px 12px; padding: 48px 20px; }
-    main h2 { font-size: 28px; }
+    nav a { padding: 14px 14px; }
+    .portfolio-card { margin: 20px 12px; padding: 28px 16px; }
+    .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  @media (min-width: 701px) and (max-width: 900px) {
+    .gallery-grid { grid-template-columns: repeat(3, 1fr); }
   }
 </style>
 </head>
@@ -132,12 +175,64 @@
   </nav>
 </header>
 
-<main>
-  <h2>GALLERY</h2>
+<main class="portfolio-card">
+  <h2>Creative Portfolio</h2>
+  <p class="subtitle">A curated look at our latest collections and artistic ventures.</p>
+
+  <div class="gallery-grid">
+    <figure class="gallery-item">
+      <img src="Profile2.jpg" alt="Project 01">
+      <figcaption>PROJECT 01</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="Profile3.jpg" alt="Project 02">
+      <figcaption>PROJECT 02</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="Profile4.jpg" alt="Project 03">
+      <figcaption>PROJECT 03</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="Profile5.jpg" alt="Project 04">
+      <figcaption>PROJECT 04</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="Profile6.jpg" alt="Project 05">
+      <figcaption>PROJECT 05</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="Profile7.jpg" alt="Project 06">
+      <figcaption>PROJECT 06</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="Profile8.jpg" alt="Project 07">
+      <figcaption>PROJECT 07</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="Profile9.jpg" alt="Project 08">
+      <figcaption>PROJECT 08</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="Profile10.jpg" alt="Project 09">
+      <figcaption>PROJECT 09</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="Profile11.jpg" alt="Project 10">
+      <figcaption>PROJECT 10</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="Profile12.jpg" alt="Project 11">
+      <figcaption>PROJECT 11</figcaption>
+    </figure>
+    <figure class="gallery-item">
+      <img src="Profile.jpg" alt="Project 12">
+      <figcaption>PROJECT 12</figcaption>
+    </figure>
+  </div>
 </main>
 
 <footer>
-  &copy; 2026 Mejia's Creatives
+  &copy; 2026 Mejia's Creatives | All Rights Reserved
 </footer>
 
 </body>
